@@ -2,10 +2,15 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.github.deansquirrel</groupId>
+  <parent>
+    <groupId>com.github.deansquirrel</groupId>
+    <artifactId>tools-parent</artifactId>
+    <version>0.0.2</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
   <artifactId>tools-secret</artifactId>
 <!--   <version>0.0.0</version>-->
-  <version>0.0.1</version>
+  <version>0.1.0</version>
   <name>tools-secret</name>
   <url>https://github.com/Deansquirrel/jtools-secret</url>
   <description>tools secret</description>
@@ -13,12 +18,13 @@
   <properties>
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <tools.common>0.1.1</tools.common>
   </properties>
 
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
@@ -41,13 +47,12 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>jul-to-slf4j</artifactId>
-      <version>1.7.32</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.github.deansquirrel</groupId>
       <artifactId>tools-common</artifactId>
-      <version>0.0.3</version>
+      <version>${tools.common}</version>
     </dependency>
   </dependencies>
 
