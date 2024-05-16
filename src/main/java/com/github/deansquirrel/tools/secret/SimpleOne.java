@@ -1,7 +1,7 @@
 package com.github.deansquirrel.tools.secret;
 
-import com.github.deansquirrel.tools.common.CommonTool;
-import com.github.deansquirrel.tools.common.MathTool;
+//import com.github.deansquirrel.tools.common.CommonTool;
+//import com.github.deansquirrel.tools.common.MathTool;
 
 import java.util.Arrays;
 import java.util.Base64;
