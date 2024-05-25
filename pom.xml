@@ -9,8 +9,8 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <artifactId>tools-secret</artifactId>
-<!--  <version>0.0.0</version>-->
-  <version>1.0.0</version>
+  <version>0.0.0</version>
+<!--  <version>1.0.0</version>-->
   <name>tools-secret</name>
   <url>https://github.com/Deansquirrel/jtools-secret</url>
   <description>tools secret</description>
