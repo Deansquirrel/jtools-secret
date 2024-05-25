@@ -1,7 +1,7 @@
 package com.github.deansquirrel.tools.secret;
 
-//import com.github.deansquirrel.tools.common.CommonTool;
-//import com.github.deansquirrel.tools.common.MathTool;
+import com.github.deansquirrel.tools.common.CommonTool;
+import com.github.deansquirrel.tools.common.MathTool;
 
 import java.util.Arrays;
 import java.util.Base64;
@@ -29,7 +29,7 @@ public class SimpleOne {
         if(plainText == null || key == null) {
             throw new Exception("原文或密码不可为空");
         }
-        if(plainText.length() < 1 || key.length() < 1) {
+        if(plainText.isEmpty() || key.isEmpty()) {
             throw new Exception("原文或密码不可为空");
         }
 
