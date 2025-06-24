@@ -26,7 +26,7 @@ public class SimpleOne {
 
         byte[] sPlain =(key + plainText).getBytes("GBK");
 
-        String sMd5 = CommonTool.Md5Encode(sPlain);
+        String sMd5 = CommonTool.md5Encode(sPlain);
 
         byte[] hexMd5 = SecretCommon.hexStr2Bytes(sMd5) ;
 
@@ -70,7 +70,7 @@ public class SimpleOne {
 
             byte[] byteTemp = SecretCommon.byteMerger(keyByte, plainByte);
 
-            sMd5 = SecretCommon.hexStr2Bytes(CommonTool.Md5Encode(byteTemp)) ;
+            sMd5 = SecretCommon.hexStr2Bytes(CommonTool.md5Encode(byteTemp)) ;
         } catch(Exception e) {
             throw new Exception("解密失败。（非法文本）");
         }

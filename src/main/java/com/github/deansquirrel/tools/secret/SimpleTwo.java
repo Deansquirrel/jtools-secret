@@ -21,9 +21,9 @@ public class SimpleTwo {
         String keyR = key == null ? "" : key;
 
         byte[] sPlain = (keyR + plainTextR).getBytes("GBK");
-        byte[] hexSMd5 = SecretCommon.hexStr2Bytes(CommonTool.Md5Encode(sPlain)) ;
+        byte[] hexSMd5 = SecretCommon.hexStr2Bytes(CommonTool.md5Encode(sPlain)) ;
         byte[] tCurr = String.valueOf(System.currentTimeMillis()).getBytes(StandardCharsets.UTF_8);
-        byte[] hexTMd5 = SecretCommon.hexStr2Bytes(CommonTool.Md5Encode(tCurr)) ;
+        byte[] hexTMd5 = SecretCommon.hexStr2Bytes(CommonTool.md5Encode(tCurr)) ;
 
         byte[] resultByte = SecretCommon.byteMerger(hexSMd5, sPlain, hexTMd5, tCurr);
 
@@ -82,8 +82,8 @@ public class SimpleTwo {
             sMd5Check = new byte[16];
             System.arraycopy(resultByte, 0, sMd5Check, 0, sMd5Check.length);
 
-            hexSMd5 = SecretCommon.hexStr2Bytes(CommonTool.Md5Encode(SecretCommon.byteMerger(keyByte, plainByte)));
-            hexTMd5 = SecretCommon.hexStr2Bytes(CommonTool.Md5Encode(tCheck));
+            hexSMd5 = SecretCommon.hexStr2Bytes(CommonTool.md5Encode(SecretCommon.byteMerger(keyByte, plainByte)));
+            hexTMd5 = SecretCommon.hexStr2Bytes(CommonTool.md5Encode(tCheck));
             timestamp = Long.parseLong(new String(tCheck, StandardCharsets.UTF_8));
         } catch (Exception e) {
             throw new Exception("解密失败。（非法文本）");
